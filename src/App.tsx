@@ -1,17 +1,19 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { Login } from './pages/Login';
-import { Callback } from './pages/Callback';
-import { AuthPopup } from './pages/AuthPopup';
-import { DashboardLayout } from './layouts/DashboardLayout';
-import { PricingPlans } from './pages/dashboard/PricingPlans';
-import { ClientKeys } from './pages/dashboard/ClientKeys';
-import { Overview } from './pages/dashboard/Overview';
-import { SSOTest } from './pages/SSOTest';
+import React from "react";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Login } from "./pages/Login";
+import { Callback } from "./pages/Callback";
+import { AuthPopup } from "./pages/AuthPopup";
+import { DashboardLayout } from "./layouts/DashboardLayout";
+import { PricingPlans } from "./pages/dashboard/PricingPlans";
+import { ClientKeys } from "./pages/dashboard/ClientKeys";
+import { Overview } from "./pages/dashboard/Overview";
+import { SSOTest } from "./pages/SSOTest";
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Routes>
+    <Routes location={location}>
       <Route path="/" element={<Login />} />
       <Route path="/callback" element={<Callback />} />
       <Route path="/ssotest" element={<SSOTest />} />
