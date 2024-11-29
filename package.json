@@ -13,8 +13,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.24.1",
+    "@micard/sso": "file:",
     "@stripe/stripe-js": "^3.0.5",
+    "@tanstack/react-query": "^5.24.1",
     "jose": "^5.2.3",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
